@@ -9,9 +9,11 @@ import { InfoModule } from './info/info.module';
 import { PlanModule } from './plan/plan.module';
 import { SummaryModule } from './summary/summary.module';
 import { SharedModule } from './shared/shared.module';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
-  declarations: [AppComponent, FormPlansComponent],
+  declarations: [AppComponent, FormPlansComponent, SidebarComponent, ResultsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
