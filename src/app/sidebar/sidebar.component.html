@@ -1,12 +1,12 @@
 <!-- Sidebar start -->
 
 <nav>
-  <div>Step 1 Your info</div>
+  <div (click)="changeTab('personal')">Step 1 Your info</div>
 
-  <div>Step 2 Select plan</div>
-  <div>Step 3 Add-ons</div>
+  <div tabsID="plan" (click)="changeTab('plan')">Step 2 Select plan</div>
+  <div tabsID="add-ons" (click)="changeTab('add-ons')">Step 3 Add-ons</div>
 
-  <div>Step 4 Summary</div>
+  <div tabsID="finish" (click)="changeTab('summary')">Step 4 Summary</div>
 </nav>
 
 <!-- Sidebar end -->

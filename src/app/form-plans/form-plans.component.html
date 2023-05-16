@@ -1,5 +1,5 @@
 <app-sidebar></app-sidebar>
-<app-personal></app-personal>
-<app-select-plan></app-select-plan>
-<app-pick-addons></app-pick-addons>
-<app-finished></app-finished>
+<app-personal *ngIf="tabs.isTabsOpen('personal')"></app-personal>
+<app-select-plan *ngIf="tabs.isTabsOpen('plan')"></app-select-plan>
+<app-pick-addons *ngIf="tabs.isTabsOpen('add-ons')"></app-pick-addons>
+<app-finished *ngIf="tabs.isTabsOpen('summary')"></app-finished>

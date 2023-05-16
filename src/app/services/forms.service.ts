@@ -19,4 +19,17 @@ export class FormsService {
   isTabsOpen(id: string): boolean {
     return !!this.tabs.find((element) => element.id === id)?.visible;
   }
+
+  toggleTabs(id: String) {
+    const changeVisible = this.tabs.find((element) => element.visible === true);
+    if (changeVisible) {
+      changeVisible.visible = false;
+    }
+    console.log(this.tabs);
+
+    const tab = this.tabs.find((element) => element.id === id);
+    if (tab) {
+      tab.visible = true;
+    }
+  }
 }

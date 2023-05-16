@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormsService } from '../services/forms.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { FormsService } from '../services/forms.service';
   styleUrls: ['./form-plans.component.scss'],
 })
 export class FormPlansComponent implements OnInit {
-  @Input() TabsID = '';
+  @Input() tabsID = 'personal';
 
   constructor(public tabs: FormsService) {}
   ngOnInit(): void {
@@ -15,9 +15,5 @@ export class FormPlansComponent implements OnInit {
     this.tabs.register('plan', false);
     this.tabs.register('add-ons', false);
     this.tabs.register('summary', false);
-
-    console.log(this.tabs);
-
-    //TODO:create a condition to check which id is currently true for visible in services
   }
 }
