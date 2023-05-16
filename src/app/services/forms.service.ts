@@ -21,12 +21,12 @@ export class FormsService {
   }
 
   toggleTabs(id: String) {
+    //find object which has visible:true and change it to false
     const changeVisible = this.tabs.find((element) => element.visible === true);
     if (changeVisible) {
       changeVisible.visible = false;
     }
-    console.log(this.tabs);
-
+    //find the id and change the visible to true
     const tab = this.tabs.find((element) => element.id === id);
     if (tab) {
       tab.visible = true;

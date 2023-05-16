@@ -15,5 +15,6 @@ export class FormPlansComponent implements OnInit {
     this.tabs.register('plan', false);
     this.tabs.register('add-ons', false);
     this.tabs.register('summary', false);
+    this.tabs.register('result', false);
   }
 }
