@@ -1,13 +1,13 @@
-<main class="w-screen h-screen wd:flex wd:justify-center wd:items-center">
+<main class="w-screen h-screen md:flex md:justify-center md:items-center">
   <div
     class="w-full md:w-2/3 h-auto flex flex-col md:flex-row justify-center items-center bg-transparent md:bg-white"
   >
     <img
       src="../../assets/images/bg-sidebar-mobile.svg"
-      class="bg-image md:hidden absolute z-10"
+      class="bg-image md:hidden absolute z-1 top-0 w-full"
     />
-    <app-sidebar class="nav-container w-full z-0 relative"></app-sidebar>
-    <section class="w-90% bg-white">
+    <app-sidebar class="nav-container w-full z-0"></app-sidebar>
+    <section class="w-90% bg-white z-0">
       <app-personal *ngIf="tabs.isTabsOpen('personal')"></app-personal>
       <app-select-plan *ngIf="tabs.isTabsOpen('plan')"></app-select-plan>
       <app-pick-addons *ngIf="tabs.isTabsOpen('add-ons')"></app-pick-addons>
