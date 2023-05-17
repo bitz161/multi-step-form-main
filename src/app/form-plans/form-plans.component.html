@@ -1,6 +1,10 @@
-<app-sidebar></app-sidebar>
-<app-personal *ngIf="tabs.isTabsOpen('personal')"></app-personal>
-<app-select-plan *ngIf="tabs.isTabsOpen('plan')"></app-select-plan>
-<app-pick-addons *ngIf="tabs.isTabsOpen('add-ons')"></app-pick-addons>
-<app-finished *ngIf="tabs.isTabsOpen('summary')"></app-finished>
-<app-results *ngIf="tabs.isTabsOpen('result')"></app-results>
+<main class="w-80">
+  <app-sidebar></app-sidebar>
+  <section>
+    <app-personal *ngIf="tabs.isTabsOpen('personal')"></app-personal>
+    <app-select-plan *ngIf="tabs.isTabsOpen('plan')"></app-select-plan>
+    <app-pick-addons *ngIf="tabs.isTabsOpen('add-ons')"></app-pick-addons>
+    <app-finished *ngIf="tabs.isTabsOpen('summary')"></app-finished>
+    <app-results *ngIf="tabs.isTabsOpen('result')"></app-results>
+  </section>
+</main>
