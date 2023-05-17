@@ -1,10 +1,20 @@
-<main class="w-80">
-  <app-sidebar></app-sidebar>
-  <section>
-    <app-personal *ngIf="tabs.isTabsOpen('personal')"></app-personal>
-    <app-select-plan *ngIf="tabs.isTabsOpen('plan')"></app-select-plan>
-    <app-pick-addons *ngIf="tabs.isTabsOpen('add-ons')"></app-pick-addons>
-    <app-finished *ngIf="tabs.isTabsOpen('summary')"></app-finished>
-    <app-results *ngIf="tabs.isTabsOpen('result')"></app-results>
-  </section>
+<main class="w-screen h-screen wd:flex wd:justify-center wd:items-center">
+  <div
+    class="w-full md:w-2/3 h-auto flex flex-col md:flex-row justify-center items-center bg-transparent md:bg-white"
+  >
+    <img
+      src="../../assets/images/bg-sidebar-mobile.svg"
+      class="bg-image md:hidden absolute z-10"
+    />
+    <app-sidebar class="nav-container w-full z-0 relative"></app-sidebar>
+    <section class="w-90% bg-white">
+      <app-personal *ngIf="tabs.isTabsOpen('personal')"></app-personal>
+      <app-select-plan *ngIf="tabs.isTabsOpen('plan')"></app-select-plan>
+      <app-pick-addons *ngIf="tabs.isTabsOpen('add-ons')"></app-pick-addons>
+      <app-finished *ngIf="tabs.isTabsOpen('summary')"></app-finished>
+      <app-results *ngIf="tabs.isTabsOpen('result')"></app-results>
+    </section>
+  </div>
 </main>
+
+<!-- TODO:Fix image positioning -->

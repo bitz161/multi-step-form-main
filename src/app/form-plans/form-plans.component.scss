@@ -1,4 +1,8 @@
 main {
   border: 1px solid black;
-  //   width: 50%;
+  & > div {
+    .bg-image {
+      // z-index: 0;
+    }
+  }
 }
