@@ -1,12 +1,22 @@
 <!-- Sidebar start -->
 
-<nav>
-  <div (click)="changeTab('personal')">Step 1 Your info</div>
-
-  <div tabsID="plan" (click)="changeTab('plan')">Step 2 Select plan</div>
-  <div tabsID="add-ons" (click)="changeTab('add-ons')">Step 3 Add-ons</div>
-
-  <div tabsID="finish" (click)="changeTab('summary')">Step 4 Summary</div>
+<nav class="flex flex-row md:flex-col justify-center md:justify-normal">
+  <div (click)="changeTab('personal')">
+    <app-sidebar-button>1</app-sidebar-button>
+    <div class="hidden md:block">Step 1 Your info</div>
+  </div>
+  <div tabsID="plan" (click)="changeTab('plan')">
+    <app-sidebar-button>2</app-sidebar-button>
+    <div class="hidden md:block">Step 2 Select plan</div>
+  </div>
+  <div tabsID="add-ons" (click)="changeTab('add-ons')">
+    <app-sidebar-button>3</app-sidebar-button>
+    <div class="hidden md:block">Step 3 Add-ons</div>
+  </div>
+  <div tabsID="finish" (click)="changeTab('summary')">
+    <app-sidebar-button>4</app-sidebar-button>
+    <div class="hidden md:block">Step 4 Summary</div>
+  </div>
 </nav>
 
 <!-- Sidebar end -->
