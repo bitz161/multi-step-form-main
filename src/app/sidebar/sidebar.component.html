@@ -1,22 +1,26 @@
-<!-- Sidebar start -->
+<nav
+  class="flex flex-row md:flex-col justify-center md:justify-normal p-10 md:px-2 md:h-full"
+>
+  <app-sidebar-button
+    buttonNumber="1"
+    (btnClick)="changeTab('personal')"
+    buttonDescription="Your info"
+  ></app-sidebar-button>
+  <app-sidebar-button
+    buttonNumber="2"
+    (btnClick)="changeTab('plan')"
+    buttonDescription="Select plan"
+  ></app-sidebar-button>
 
-<nav class="flex flex-row md:flex-col justify-center md:justify-normal">
-  <div (click)="changeTab('personal')">
-    <app-sidebar-button>1</app-sidebar-button>
-    <div class="hidden md:block">Step 1 Your info</div>
-  </div>
-  <div tabsID="plan" (click)="changeTab('plan')">
-    <app-sidebar-button>2</app-sidebar-button>
-    <div class="hidden md:block">Step 2 Select plan</div>
-  </div>
-  <div tabsID="add-ons" (click)="changeTab('add-ons')">
-    <app-sidebar-button>3</app-sidebar-button>
-    <div class="hidden md:block">Step 3 Add-ons</div>
-  </div>
-  <div tabsID="finish" (click)="changeTab('summary')">
-    <app-sidebar-button>4</app-sidebar-button>
-    <div class="hidden md:block">Step 4 Summary</div>
-  </div>
+  <app-sidebar-button
+    buttonNumber="3"
+    (btnClick)="changeTab('add-ons')"
+    buttonDescription="Add-ons"
+  ></app-sidebar-button>
+
+  <app-sidebar-button
+    buttonNumber="4"
+    (btnClick)="changeTab('summary')"
+    buttonDescription="Summary"
+  ></app-sidebar-button>
 </nav>
-
-<!-- Sidebar end -->

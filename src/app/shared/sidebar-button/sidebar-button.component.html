@@ -1,3 +1,11 @@
-<button>
-  <ng-content></ng-content>
-</button>
+<div (click)="onClick()" class="sidebar-button-container mx-1 flex flex-row">
+  <button
+    class="border-2 p-2 px-4 rounded-full text-white font-medium hover:bg-lightblue hover:text-marineblue m-1 md:m-3"
+  >
+    {{ buttonNumber }}
+  </button>
+  <div class="hidden md:block">
+    <section>Step {{ buttonNumber }}</section>
+    <section class="uppercase font-bold">{{ buttonDescription }}</section>
+  </div>
+</div>

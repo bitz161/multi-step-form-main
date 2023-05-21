@@ -18,6 +18,16 @@ module.exports = {
         alabaster: "hsl(231, 100%, 99%)",
         white: "hsl(0, 0%, 100%)",
       },
+      fontFamily: {
+        ubuntu: ["Ubuntu", "sans-serif"],
+      },
+      backgroundImage: {
+        desktopImage: "url('./assets/images/bg-sidebar-desktop.svg')",
+      },
+      spacing: {
+        "36rem": "36rem",
+        "60rem": "60rem",
+      },
     },
   },
   plugins: [],
