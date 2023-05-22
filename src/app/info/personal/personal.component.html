@@ -2,26 +2,43 @@
 
 <div>
   <section>
-    <h2>Personal info</h2>
-    Please provide your name, email address, and phone number.
+    <h2 class="text-xl md:text-2xl font-bold">Personal info</h2>
+    <p class="text-coolgray">
+      Please provide your name, email address, and phone number.
+    </p>
   </section>
 
   <form>
-    <div>
-      Name
-      <input placeholder="e.g. Stephen King" />
-    </div>
-    <div>
-      Email Address
-      <input placeholder="e.g. stephenking@lorem.com" />
-    </div>
-    <div>
-      Phone Number
-      <input placeholder="e.g. +1 234 567 890" />
-    </div>
-  </form>
+    <!-- Name -->
+    <app-input-shared
+      placeholder="e.g. Stephen King"
+      inputLabel="Name"
+      [control]="name"
+    ></app-input-shared>
 
-  <button>Next Step</button>
+    <!-- Email Address -->
+    <app-input-shared
+      placeholder="e.g. stephenking@lorem.com"
+      inputLabel="Email Address"
+      [control]="email"
+    ></app-input-shared>
+
+    <!-- Phone Number -->
+    <app-input-shared
+      placeholder="e.g. +1 234 567 890"
+      inputLabel="Phone Number"
+      [control]="phoneNumber"
+    ></app-input-shared>
+  </form>
+</div>
+
+<!-- Button -->
+<div
+  class="absolute md:static w-full h-10rem bottom-0 left-0 bg-white/50 flex justify-end p-4"
+>
+  <button class="bg-marineblue text-white text-sm p-2 px-4 rounded-md">
+    Next Step
+  </button>
 </div>
 
 <!-- Step 1 end -->
