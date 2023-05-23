@@ -13,10 +13,14 @@ import {
 })
 export class PersonalComponent {
   name = new FormControl('', [Validators.required, Validators.minLength(3)]);
-  email = new FormControl('');
-  phoneNumber = new FormControl('');
+  email = new FormControl('', [Validators.required, Validators.email]);
+  phoneNumber = new FormControl('', [
+    Validators.required,
+    Validators.minLength(9),
+    Validators.maxLength(9),
+  ]);
 
-  registerForm = new FormControl({
+  infoForm = new FormGroup({
     name: this.name,
     email: this.email,
     phoneNumber: this.phoneNumber,

@@ -8,12 +8,13 @@
     </p>
   </section>
 
-  <form>
+  <form [formGroup]="infoForm">
     <!-- Name -->
     <app-input-shared
       placeholder="e.g. Stephen King"
       inputLabel="Name"
       [control]="name"
+      type="text"
     ></app-input-shared>
 
     <!-- Email Address -->
@@ -21,6 +22,7 @@
       placeholder="e.g. stephenking@lorem.com"
       inputLabel="Email Address"
       [control]="email"
+      type="email"
     ></app-input-shared>
 
     <!-- Phone Number -->
@@ -28,6 +30,7 @@
       placeholder="e.g. +1 234 567 890"
       inputLabel="Phone Number"
       [control]="phoneNumber"
+      format="(000)000-0000"
     ></app-input-shared>
   </form>
 </div>

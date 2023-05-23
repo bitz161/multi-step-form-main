@@ -8,7 +8,9 @@ import { FormControl } from '@angular/forms';
 })
 export class InputSharedComponent implements OnInit {
   @Input() placeholder = '';
+  @Input() type = '';
   @Input() inputLabel = '';
+  @Input() format = '';
   @Input() control: FormControl = new FormControl();
 
   constructor() {}
