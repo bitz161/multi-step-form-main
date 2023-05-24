@@ -13,7 +13,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ResultsComponent } from './results/results.component';
 
 @NgModule({
-  declarations: [AppComponent, FormPlansComponent, SidebarComponent, ResultsComponent],
+  declarations: [
+    AppComponent,
+    FormPlansComponent,
+    SidebarComponent,
+    ResultsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
